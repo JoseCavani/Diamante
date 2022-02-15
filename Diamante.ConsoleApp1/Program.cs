@@ -25,11 +25,11 @@ namespace Diamante.ConsoleApp1
                     }
                     Console.WriteLine();
                 }
-                for (int i = ((x - 1) / 2) + 1; i <= x; i++)
+                for (int i = ((x - 1) / 2); i <= x; i++)
                 {
                     for (int z = 0; z < x; z++)
                     {        
-                        if (z >= ((x - 1) / 2) - (x - i) && z <= ((x - 1) / 2) + (x - i))
+                        if (z > ((x - 1) / 2) - (x - i) && z < ((x - 1) / 2) + (x - i))
                         {
                             Console.Write("x");
                         }
