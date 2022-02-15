@@ -11,7 +11,7 @@ namespace Diamante.ConsoleApp1
             if (!(int.TryParse(Console.ReadLine(), out int x)) || x % 2 != 0)
             {
 
-                for (int i = 0; i <= ((x - 1) / 2); i++)
+                for (int i = 0; i < ((x - 1) / 2); i++)
                 {
                     for (int z = 0; z < x; z++)
                     {
@@ -25,7 +25,7 @@ namespace Diamante.ConsoleApp1
                     }
                     Console.WriteLine();
                 }
-                for (int i = ((x + 1) / 2) + 1; i <= x; i++)
+                for (int i = ((x - 1) / 2) + 1; i <= x; i++)
                 {
                     for (int z = 0; z < x; z++)
                     {        
