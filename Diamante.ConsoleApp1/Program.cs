@@ -10,13 +10,15 @@ namespace Diamante.ConsoleApp1
             Console.WriteLine("digite um numero impar");
             if (!(int.TryParse(Console.ReadLine(), out int x)) || x % 2 != 0)
             {
-
+                                // 5-1 /2 = 2
                 for (int i = 0; i < ((x - 1) / 2); i++)
                 {
                     for (int z = 0; z < x; z++)
-                    {
-                        if (z >= ((x - 1) / 2) - i && z <= ((x - 1) / 2) + i)
+                    {                //((5-1)/2) 2 - 0
+                        if (z >= ((x - 1) / 2) - i)
                         {
+                            if (z > ((x - 1) / 2) + i)
+                                break;
                             Console.Write("x");
                         }
 
@@ -28,9 +30,11 @@ namespace Diamante.ConsoleApp1
                 for (int i = ((x - 1) / 2); i < x; i++)
                 {
                     for (int z = 0; z < x; z++)
-                    {        
-                        if (z > ((x - 1) / 2) - (x - i) && z < ((x - 1) / 2) + (x - i))
+                    {                       //((5-1)/2) 2 + (5-3) 2 = 4    
+                        if (z > ((x - 1) / 2) - (x - i) )
                         {
+                            if (z >= ((x - 1) / 2) + (x - i))
+                                break;
                             Console.Write("x");
                         }
 
